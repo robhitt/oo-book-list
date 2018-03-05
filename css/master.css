@@ -68,7 +68,7 @@
 
 .selector--arrow {
   position: absolute;
-  right: 11%;
+  right: 12px;
   top: calc(50% + -3px);
   transform: translateY(-50%);
   color: #000;
