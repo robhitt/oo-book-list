@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <meta name="author" content="Rob Hitt">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="stylesheet" href="css/master.css" type="text/css">
+
+  <script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body>
+  <div class="container container--style">
+    <div class="container__header container__header--style">
+      <div class="container__header-item--style">title</div>
+      <div class="container__header-item--style">author</div>
+      <div class="container__header-item--style">page count</div>
+      <div class="container__header-item--style">read</div>
+      <div class="container__header-item--style">add/delete</div>
+    </div>
+    <div class="container__add-book container__add-book--style">
+      <form id="add-book">
+        <div class="container__add-book-item--style">
+          <div class="container__books--vertical-center">
+            <input type="text" class="add-book--input" name="title" placeholder="add title" />
+          </div>
+        </div>
+        <div class="container__add-book-item--style">
+          <div class="container__books--vertical-center">
+            <input type="text" class="add-book--input" name="author" placeholder="add author" />
+          </div>
+        </div>
+        <div class="container__add-book-item--style">
+          <div class="container__books--vertical-center">
+            <input type="text" class="add-book--input" name="pages" placeholder="add pages" />
+          </div>
+        </div>
+        <div class="container__add-book-item--style">
+          <div class="container__books--vertical-center">
+              <div class="selector--arrow">
+                  <div class="arrow"></div>
+                </div>
+            <select name="read" class="container__add-book--selector">
+              <option value="true" name="read">read</option>
+              <option value="false" name="unread">unread</option>
+            </select>
+          </div>
+        </div>
+        <div class="container__add-book-item--style">
+          <div class="container__books--vertical-center">
+            <input type="submit" class="add-book--submit" value="add new book" />
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="container__books container__books--style">
+
+    </div>
+  </div>
+
+</body>
+
+</html>
