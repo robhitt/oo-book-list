@@ -45,7 +45,7 @@ window.onload = function() {
           </select>
         </div>
       </div>
-      <div class="container__books-item--style"><div class="books__delete container__books--vertical-center books__delete--style" data-book-id=${index}>Delete</div></div>
+      <div class="container__books-item--style container__books-item--last"><div class="books__delete container__books--vertical-center books__delete--style" data-book-id=${index}>Delete</div></div>
     `;
   
       booksContainer.insertAdjacentHTML('afterbegin', html);

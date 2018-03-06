@@ -9,13 +9,18 @@
   <meta name="description" content="">
   <meta name="keywords" content="">
   <link rel="stylesheet" href="css/master.css" type="text/css">
-
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
 </head>
 
 <body>
   <div class="container container--style">
-    <div class="hero">Add Delete and Edit Books in the Library</div>
+    <div class="hero">
+        <span class="fa--grey"><i class="fas fa-book"></i></span>
+        <span>Add Delete and Edit Books in the Library</span>
+    </div>
+
+    <div class="main--box-shadow"">
     <div class="container__header container__header--style">
       <div class="container__header-item--style">title</div>
       <div class="container__header-item--style">author</div>
@@ -27,25 +32,29 @@
       <form id="add-book">
         <div class="container__add-book-item--style">
           <div class="container__books--vertical-center">
-            <input type="text" class="add-book--input" name="title" placeholder="add title" />
+            <label for="title" class="addbook__label--style">title:</label>
+            <input type="text" class="add-book--input" name="title" placeholder="add title" id="title"/>
           </div>
         </div>
         <div class="container__add-book-item--style">
           <div class="container__books--vertical-center">
-            <input type="text" class="add-book--input" name="author" placeholder="add author" />
+            <label for="author" class="addbook__label--style">author:</label>
+            <input type="text" class="add-book--input" name="author" placeholder="add author" id="author" />
           </div>
         </div>
         <div class="container__add-book-item--style">
           <div class="container__books--vertical-center">
-            <input type="text" class="add-book--input" name="pages" placeholder="add pages" />
+              <label for="pages" class="addbook__label--style">add pages:</label>
+            <input type="text" class="add-book--input" name="pages" placeholder="add pages" id="pages" />
           </div>
         </div>
         <div class="container__add-book-item--style">
           <div class="container__books--vertical-center">
-            <div class="selector--arrow">
+            <label for="read" class="addbook__label--style">read:</label>
+            <div class="selector--arrow arrow--mobile">
               <div class="arrow"></div>
             </div>
-            <select name="read" class="container__add-book--selector">
+            <select name="read" class="container__add-book--selector container__add-book--selector-mobile" id="read">
               <option value="true" name="read">read</option>
               <option value="false" name="unread">unread</option>
             </select>
@@ -58,9 +67,8 @@
         </div>
       </form>
     </div>
-    <div class="container__books container__books--style">
-
-    </div>
+    <div class="container__books container__books--style"></div>
+  </div>
   </div>
 
 </body>
