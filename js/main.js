@@ -70,6 +70,18 @@ window.onload = function() {
   
   function addNewBook(event) {
     event.preventDefault();
+
+    let filterInt = function(value) {
+      if (/^(\-|\+)?([0-9]+|Infinity)$/.test(value)) {
+        return Number(value);
+      }
+      return NaN;
+    }
+
+    if (!filterInt(this.pages.value) && this.pages.value !== "0") {
+      alert("You must enter an integer for the page number.");
+      return;
+    }  
     
     if (this.title.value && this.author.value && this.pages.value) {
       let readBook;
