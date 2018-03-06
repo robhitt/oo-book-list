@@ -36,7 +36,13 @@ window.onload = function() {
       <div class="container__books-item--style"><div class="container__books--vertical-center">${book.pages}</div></div>
       <div class="container__books-item--style">
         <div class="container__books-read container__books--vertical-center" data-book-id=${index}>
-          ${book.read ? "read" : "unread"}
+          <div class="selector--arrow">
+            <div class="arrow"></div>
+          </div>  
+          <select name="read" class="container__add-book--selector">
+            <option value="true" name="read" ${book.read ? "selected" : ""}>read</option>
+            <option value="false" name="unread" ${!book.read ? "selected" : ""}>unread</option>
+          </select>
         </div>
       </div>
       <div class="container__books-item--style"><div class="books__delete container__books--vertical-center books__delete--style" data-book-id=${index}>Delete</div></div>
@@ -48,7 +54,7 @@ window.onload = function() {
     // TOGGLE BOOK BEING READ
     const readBooks = document.querySelectorAll(".container__books-read");
     readBooks.forEach( book => {
-      book.addEventListener("click", toggleBookRead);
+      book.addEventListener("change", toggleBookRead);
     });
 
     // ADD DELETE EVENT LISTENERS
@@ -78,11 +84,14 @@ window.onload = function() {
   }
 
   function toggleBookRead(event) {
+    
     let currentReadBook = document.querySelector(`[data-book-id="${event.currentTarget.dataset.bookId}"]`);
     let currentLibraryItem = myLibrary[parseInt(event.currentTarget.dataset.bookId)];
     currentLibraryItem.read = !currentLibraryItem.read
     
     render(myLibrary);
+    console.log(myLibrary);
+    
   }
 
   // DELETE A BOOK
