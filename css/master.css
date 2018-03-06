@@ -9,6 +9,9 @@
   width: 90%;
   margin: 20px auto 0;
   font-size: 0;
+  -webkit-box-shadow: 3px 4px 5px 0px rgba(186,186,186,1);
+  -moz-box-shadow: 3px 4px 5px 0px rgba(186,186,186,1);
+  box-shadow: 3px 4px 5px 0px rgba(186,186,186,1);
 }
 
 .hero {
@@ -16,13 +19,16 @@
   font-size: 20px;
   border: 2px solid #000;
   background-color: navajowhite;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   font-size: 18px;
   padding: 15px 10px;
   text-align: center;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
+  -webkit-box-shadow: 3px 4px 5px 0px rgba(186,186,186,1);
+  -moz-box-shadow: 3px 4px 5px 0px rgba(186,186,186,1);
+  box-shadow: 3px 4px 5px 0px rgba(186,186,186,1);
 }
 
 .container__header--style {
